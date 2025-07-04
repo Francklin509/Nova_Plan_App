@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jp!n#4mq!oaq=0&+_k$$_5aj-!d6j9g-@l-%ivp4=&ikfjl1ty'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['nova-plan-builders.onrender.com']
 
 
 # Application definition

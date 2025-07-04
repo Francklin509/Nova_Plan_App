@@ -30,8 +30,8 @@ SECRET_KEY = 'django-insecure-jp!n#4mq!oaq=0&+_k$$_5aj-!d6j9g-@l-%ivp4=&ikfjl1ty
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['nova-plan-builders.onrender.com', 'localhost', '0.0.0.0:10000 ']
 
+ALLOWED_HOSTS = ['nova-plan-builders.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 

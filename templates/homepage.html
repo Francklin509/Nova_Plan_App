@@ -24,7 +24,11 @@
                     <div class="p-3" style="max-width: 900px;">
                         <h4 class="text-white text-uppercase mb-md-3">Contact Us</h4>
                         <h1 class="display-1 text-white mb-md-4">Best Price For Your Quote</h1>
+                         {% if user.is_authenticated %}
                         <a href="/services" class="btn btn-primary py-md-3 px-md-5 mt-2">Our Services</a>
+                        {% else %}
+                        <a href="/login?next=/users" class="btn btn-primary py-md-3 px-md-5 mt-2">Our Services</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -49,7 +53,13 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
                     <img class="w-75 mb-4" src="static/image/plan002.jpg" alt="">
-                    <p>Justo et eos et ut takimata sed sadipscing dolore lorem, et elitr labore labore voluptua no rebum sed, stet voluptua amet sed elitr ea dolor dolores no clita. Dolores diam magna clita ea eos amet, amet rebum voluptua vero vero sed clita accusam takimata. Nonumy labore ipsum sea voluptua sea eos sit justo, no ipsum sanctus sanctus no et no ipsum amet, tempor labore est labore no. Eos diam eirmod lorem ut eirmod, ipsum diam sadipscing stet dolores elitr elitr eirmod dolore. Magna elitr accusam takimata labore, et at erat eirmod consetetur tempor eirmod invidunt est, ipsum nonumy at et.</p>
+                    <p>Welcome to Nova Plan Builder's Where Vision Meets Structure
+
+At the intersection of bold ideas and solid foundations, we bring spaces to life. Whether you're dreaming up a new home, envisioning a striking commercial space, or reimagining your environment, we’re here to build it beautifully and brilliantly.
+
+With a passion for design and a commitment to craftsmanship, our team of architects, engineers, and builders turns your vision into lasting form. From blueprint to final beam, we blend creativity, precision, and care in every step of the journey.
+
+Explore our projects, meet the team, and see how we transform plans into purpose. Let's build something remarkable together.</p>
                 </div>
             </div>
             <div class="row mt-3">
@@ -97,7 +107,7 @@
                             <h1 class="display-2 text-white mt-n2 m-0">01</h1>
                         </div>
                         <h4 class="text-uppercase mb-3">Architechture</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+                        <p class="m-0">Architecture is more than the structure it’s the story it tells, the feeling it evokes, and the lives it shapes. At Nova Plan Builder's, we believe that exceptional design emerges from the perfect balance of form and function, art and engineering, imagination and reality.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
@@ -108,8 +118,8 @@
                             </div>
                             <h1 class="display-2 text-white mt-n2 m-0">02</h1>
                         </div>
-                        <h4 class="text-uppercase mb-3">Devis</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+                        <h4 class="text-uppercase mb-3">Quote</h4>
+                        <p class="m-0">Let’s Design Your Vision Ready to turn concept into creation? Whether you're planning a sleek residential build, a dynamic commercial space, or a bespoke renovation, our architectural team is here to guide you from idea to execution.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
@@ -121,7 +131,7 @@
                             <h1 class="display-2 text-white mt-n2 m-0">03</h1>
                         </div>
                         <h4 class="text-uppercase mb-3">Area Inspection</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit lebore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+                        <p class="m-0">Before any groundbreaking begins, a solid foundation starts with knowledge. Our Area Inspection Services provide an in depth analysis of your project site evaluating terrain, topography, zoning regulations, and potential design challenges.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
@@ -133,7 +143,7 @@
                             <h1 class="display-2 text-white mt-n2 m-0">04</h1>
                         </div>
                         <h4 class="text-uppercase mb-3">Plan Conception</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+                        <p class="m-0">Every great structure starts with a powerful idea and the right plan brings that idea to life. Our Plan Conception Services transform your goals into comprehensive, actionable design strategies that serve as the blueprint for success.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
@@ -145,7 +155,7 @@
                             <h1 class="display-2 text-white mt-n2 m-0">05</h1>
                         </div>
                         <h4 class="text-uppercase mb-3">Home Restauration</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+                        <p class="m-0">Your home has a story and we’re here to help restore it with care, precision, and artistry. Whether it’s preserving historical charm or modernizing for today’s lifestyle, our Home Restoration Services bring craftsmanship and character together in perfect harmony.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-2">
@@ -157,7 +167,7 @@
                             <h1 class="display-2 text-white mt-n2 m-0">06</h1>
                         </div>
                         <h4 class="text-uppercase mb-3">Modern Constrution</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+                        <p class="m-0">Today Innovation is at the heart of everything we build. Our Modern Construction Services combine cutting edge technology, contemporary design, and sustainable practices to create spaces that are not just built for today but designed for the future.</p>
                     </div>
                 </div>
             </div>

@@ -67,7 +67,7 @@
 <div class="container-fluid position-relative nav-bar p-0">
     <div class="position-relative px-lg-5" style="z-index: 9;">
         <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-            <a href="" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <h1 class="text-uppercase text-primary mb-1"><img src="{% static 'image/novalogo.jpeg' %}" alt="Nova_Plan Logo" height="100px" width="100px" style="border-radius: 50px;">Nova_Plan Builder's</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -86,12 +86,7 @@
                             <a href="mixte.html" class="dropdown-item">Mixte</a>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="/team" class="dropdown-item">Notre Equipe</a>
-                        </div>
-                    </div>
+                    
                     <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
@@ -99,6 +94,34 @@
     </div>
 </div>
 <!-- Navbar End -->
+
+<!-- Search Bar Start -->
+<div class="container-fluid py-3" style="background: #f8f9fa;">
+    <form class="form-inline justify-content-center" method="get" action="">
+        <div class="input-group" style="max-width: 1000px; width: 100%;">
+            <!-- Service Type Dropdown -->
+            <select class="form-control mr-2" name="service_type" required>
+                <option value="">Type de service</option>
+                <option value="construction">Construction</option>
+                <option value="renovation">Rénovation</option>
+                <option value="design">Design</option>
+                <option value="consultation">Consultation</option>
+                <!-- Ajoutez d'autres types selon vos besoins -->
+            </select>
+            <!-- Location Input -->
+            <input class="form-control mr-2" type="text" name="location" placeholder="Localisation" aria-label="Location">
+            <!-- Average Price Input -->
+            <input class="form-control mr-2" type="number" name="average_price" placeholder="Prix moyen (HTG)" min="0" step="100">
+            <!-- Keyword Search -->
+            <input class="form-control mr-2" type="search" placeholder="Mot-clé..." aria-label="Search" name="q">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i> Rechercher</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Search Bar End -->
+
    </nav>
     <main>
         {% block content %}

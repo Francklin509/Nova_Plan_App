@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import ArchitecturePost
 
 # Create your views here.
 def architechture(request):
@@ -19,3 +20,6 @@ def modern(request):
 def restauration(request):
     return render(request, 'services/restauration.html')
 
+def architechture(request):
+    posts = ArchitecturePost.objects.all()
+    return render(request, 'services/architechture.html', {'posts': posts})

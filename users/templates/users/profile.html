@@ -14,7 +14,7 @@
                     {% if user.profile.avatar.url %}
                         <img src="{{ user.profile.avatar.url }}" alt="Avatar" class="rounded-circle mb-3" width="120" height="120">
                     {% else %}
-                        <img src="{% static 'image/default_avatar.png' %}" alt="Default Avatar" class="rounded-circle mb-3" width="120" height="120">
+                        <img src="" alt="Default Avatar" class="rounded-circle mb-3" width="120" height="120">
                     {% endif %}
                     <form method="post" enctype="multipart/form-data" class="mb-3">
                         {% csrf_token %}

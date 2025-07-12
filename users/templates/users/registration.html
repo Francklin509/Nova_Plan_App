@@ -9,6 +9,7 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
             <h2 class="mb-4 text-center">Register</h2>
+
             <form method="post" novalidate>
                 {% csrf_token %}
                 <div class="mb-3">
@@ -40,7 +41,23 @@
                     {% endif %}
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Register</button>
-            </form>
+            </form> 
+            
+            <!-- Social Registration Buttons Start -->
+            <div class="mb-3 text-center">
+            <div class="text-muted my-2">or</div>
+                <a href="" class="btn btn-outline-danger w-100 mb-2">
+                    <i class="fab fa-google mr-2"></i> Register with Google
+                </a>
+                <a href="" class="btn btn-outline-primary w-100 mb-2">
+                    <i class="fab fa-facebook-f mr-2"></i> Register with Facebook
+                </a>
+                <a href="" class="btn btn-outline-primary w-100 mb-2">
+                    <i class="fab fa-apple mr-2"></i> Register with Icloud
+                </a>
+               
+            </div>
+            <!-- Social Registration Buttons End -->
         </div>
     </div>
 </body>

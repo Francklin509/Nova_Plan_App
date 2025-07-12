@@ -1,37 +1,56 @@
 {% extends "layout.html" %}
-
 {% block title %}
     Login
 {% endblock %}
 
 {% block content %}
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
-        <h2 class="mb-4 text-center">Login</h2>
-        <form method="post" novalidate>
-            {% csrf_token %}
-            {% if form.non_field_errors %}
-                <div class="alert alert-danger">{{ form.non_field_errors.0 }}</div>
-            {% endif %}
-            <div class="mb-3">
-                <label for="id_username" class="form-label">Username</label>
-                {{ form.username }}
-                {% if form.username.errors %}
-                    <div class="text-danger small">{{ form.username.errors.0 }}</div>
-                {% endif %}
+<body class="bg-light">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+            <h2 class="mb-4 text-center">Login</h2>
+            <!-- Social Login Buttons Start -->
+            <div class="mb-3 text-center">
+                <a href="" class="btn btn-outline-danger w-100 mb-2">
+                    <i class="fab fa-google mr-2"></i> Register with Google
+                </a>
+                <a href="" class="btn btn-outline-primary w-100 mb-2">
+                    <i class="fab fa-facebook-f mr-2"></i> Register with Facebook
+                </a>
+                <a href="" class="btn btn-outline-primary w-100 mb-2">
+                    <i class="fab fa-apple mr-2"></i> Register with Icloud
+                </a>
+                <div class="text-muted my-2">or</div>
             </div>
-            <div class="mb-3">
-                <label for="id_password" class="form-label">Password</label>
-                {{ form.password }}
-                {% if form.password.errors %}
-                    <div class="text-danger small">{{ form.password.errors.0 }}</div>
+            <!-- Social Login Buttons End -->
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_username" class="form-label">Username or Email</label>
+                    <input type="text" name="username" class="form-control" id="id_username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id_password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="id_password" required>
+                </div>
+                {% if form.errors %}
+                    <div class="text-danger small mb-2">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                {{ error }}<br>
+                            {% endfor %}
+                        {% endfor %}
+                        {% for error in form.non_field_errors %}
+                            {{ error }}<br>
+                        {% endfor %}
+                    </div>
                 {% endif %}
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <div class="mt-3 text-center">
+                <a href="">Forgot password?</a> | 
+                <a href="">Create an account</a>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
-        <div class="mt-3 text-center">
-            <a href="#">Don't have an account? Register</a>
         </div>
     </div>
-</div>
+</body>
 {% endblock %}
